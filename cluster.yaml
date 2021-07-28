@@ -1,0 +1,157 @@
+__default__:
+  queue: "st.q"  
+  project: "P18Z10200N0119"
+  workdir: "./"
+  mem: "1G"
+  cores: 1
+
+rmrRNA_URMAP:
+  mem: "4G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+QC_fastp:
+  mem: "4G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+QC_SOAPnuke_V2:
+  mem: "10G"
+  cores: 2
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+QC_prinseq:
+  mem: "10G"
+  cores: 2
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+QC_SortMeRNA_V4:
+  mem: "15G"
+  cores: 4
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+QC_Check:
+  mem: "4G"
+  queue: "st_short.q" 
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.0"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+kraken2:
+  mem: "4G"
+  cores: 5
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+bracken:
+  mem: "4G"
+  cores: 4
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+assemble_megahit:
+  mem: "40G"
+  cores: 4
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+assemble_metaspades:
+  mem: "90G"
+  cores: 10
+  queue: "st_supermem.q"  
+  project: "st_supermem"
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+cdhitest:
+  mem: "4G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+Blastx_Virus_Refseq_NR_IMGVR:
+  mem: "4G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+CAT_nr_refseq:
+  mem: "50G"
+  cores: 4
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+cox1_findhost:
+  mem: "4G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+virfinder:
+  mem: "20G"
+  cores: 4
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+RNA_RdRp_Virus:
+  mem: "4G"
+  queue: "st.q" 
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+RNA_Virus_Checkv:
+  mem: "4G"
+  queue: "st.q" 
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+Blastp_rdrp:
+  mem: "4G"
+  queue: "st.q" 
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+Blastn_nt:
+  mem: "10G"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+Tblastx_closespecies:
+  mem: "8G"
+  cores: 2
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+iqtree:
+  mem: "0.5G"
+  queue: "st_short.q" 
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+
+
+
+Bowtie2_RNAVirus_coverage:
+  mem: "6G"
+  cores: 2
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+

@@ -1,0 +1,172 @@
+params:
+  samples: "/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/yanzeqin/metavirus/Lastest/samples_text"
+
+##softwares
+softwares:
+  urmap: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/URMAP/bin/urmap"
+  snap_aligner: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/snap-aligner"
+  fastp: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/bin/fastp"
+  soapnuke_V1: "/ldfssz1/ST_INFECTION/F16ZQSB1SY3030_Salmonella/USER/lindechun/bin/SOAPnuke"
+  soapnuke_V2: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/SOAPnuke/2.1.5/SOAPnuke"
+  prinseq: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs/prinseq++/bin/prinseq++"
+  sortmerna_V2: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/sortmerna-2.1b/sortmerna"
+  sortmerna_V2_scripts: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/sortmerna-2.1b/scripts"
+  sortmerna_V4: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/SortMeRNA/4.3.2/bin/sortmerna"
+  megahit: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs/megahit/bin/megahit"
+  metaspades: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/SPAdes-3.14.1/bin/metaspades.py"
+  cdhitest: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/cd-hit-4.8.1/bin/cd-hit-est"
+  diamond: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/diamond"
+  tblastx: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/blast+2.10.1/blast-2.10.1+/bin/tblastx"
+  blastn: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/blast+2.10.1/blast-2.10.1+/bin/blastn" 
+  CAT: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/CAT-5.2/CAT_pack/CAT"
+  prodigal: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/.conda/envs/prokka-1.14.6/bin/prodigal"
+  checkv: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/checkv/bin/checkv"   
+  virsorter2: "/ldfssz1/ST_INFECTION/P17Z10200N0246_Phage_XMF/USER/luoyunzhe/software/miniconda3/bin/virsorter"
+  bowtie2: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/.conda/envs/Trinity-2.11.0/bin/bowtie2"
+  bowtie2_build: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/.conda/envs/Trinity-2.11.0/bin/bowtie2-build"
+  samtools: "/hwfssz5/ST_INFECTION/GlobalDatabase/user/fengqikai/software/.conda/envs/Trinity-2.11.0/bin/samtools"
+  seqkit: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/bin/seqkit"
+  sap_coverage: "/ldfssz1/ST_INFECTION/P18Z10200N0164_Resistance_PN/User/zhaohailong/software/soap.coverage"
+  
+
+##database used by softwares
+database:
+  NR_with_taxonomy: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/NCBI-BLAST/2021-05/NR/Diamond/NR.with.taxonomy"
+  NT_db: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/NCBI-BLAST/2021-05/NT/BLASTDB/download/nt"
+  NT_db_liqian: "/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/liqian6/blastdb_20201224/"
+  BLASTDB_NT: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/NCBI-BLAST/2021-05/NT/BLASTDB/download"
+  CAT_db: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/Database/nr_database/CAT_nr_append"
+  CAT_taxonomy: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/CAT/CAT_tax"
+  VirSorter2_db: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/Virsorter2/2.2.2/db"
+  CheckV_db: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/CheckV/0.8.1/update-2021-07-03-checkv-db-v1.0"
+  nonRT_RNA_Virome_blastdb: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/fqk/RefSeq-genome/2021-03-25/BLASTDB/non-RT-RNAVirus.Refseq"
+  nonRT_RNA_Virome_fasta: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/fqk/RefSeq-genome/2021-03-25/non-RT-RNAVirome.Refseq.fasta"
+  ICTV_GenomeType_index: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/zhongshan/scripts/zhongda.smk/Latest/data/ICTV_genometype.index"
+  RdRp_index: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/zhongshan/scripts/zhongda.smk/Latest/data/RdRp_Orthornavirae.clustered"
+  segmentedViralProtein_db: "/jdfssz1/ST_HEALTH/P20Z10200N0206/fengqikai/zhongshan/scripts/zhongda.smk/Latest/data/segmentDataBase/segmentDB"
+  SortMeRNA:
+    rfam_5p8s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/rfam-5.8s-database-id98.dna.fasta"
+    rfam_5s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/rfam-5s-database-id98.dna.fasta"
+    silva_arc_16s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-arc-16s-id95.fasta"
+    silva_arc_23s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-arc-23s-id98.fasta"
+    silva_bac_16s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-bac-16s-id90.fasta"
+    silva_bac_23s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-bac-23s-id98.fasta"
+    silva_euk_18s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-euk-18s-id95.fasta"
+    silva_euk_28s: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/silva-euk-28s-id98.fasta"
+    indexdir: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/public_database/rRNA/SortMeRNA_index"
+
+
+fastp:
+  f_adapter: "AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA"
+  r_adapter: "AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG"
+  q: 20
+  u: 20
+  length_required: 50
+  threads: 4
+  
+soapnuke_V2:
+  f_adapter: "AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA"
+  r_adapter: "AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG"
+  c: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/SOAPnuke/2.1.5/rmdup.config.file"
+  l: 20 
+  q: 0.2 
+  n: 0.02 
+  minL: 50
+  T: 4
+
+
+prinseq:
+  lc_entropy: 0.5
+  lc_dust: 0.5
+
+rmrRNA:
+  num_alignments: 1
+
+diamond_blastx2NR:
+  evalue: 1e-5
+  block_size: 3.0
+  index_chunks: 1
+  max_target_seqs: 50
+  outfmt: "6 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore length pident mismatch gaps staxids sscinames sskingdoms skingdoms sphylums stitle qcovhsp scovhsp"
+  superkingdom_filed: 17
+  threads: 6
+
+diamond_blastp2RdRp:
+  evalue: 1e-5
+  max_target_seqs: 50
+  outfmt: "6 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore length pident mismatch gaps stitle qcovhsp scovhsp"
+  block_size: 1.0
+  index_chunks: 1
+  threads: 1
+
+MEGAHIT:
+  memory: 20000000000
+  min_contig_len: 300
+  t: 4
+
+readsM2contigs_bowtie2:
+  p: 2
+
+VirSorter2:
+  j: 4
+  include_groups: RNA
+  VirSorter2_envs: "/hwfssz5/ST_INFECTION/GlobalDatabase/share/software/Miniconda3/envs.multi-user/Virsorter2/2.2.2"
+
+blastx2NR_ViralContigs_blastn2NT:
+  evalue: 1e-5
+  max_target_seqs: 50
+  outfmt: "6 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore length pident mismatch gaps staxid ssciname scomname sblastname sskingdom staxids sscinames scomnames sblastnames sskingdoms stitle qcovs qcovhsp qcovus"
+  superkingdom_filed: 24
+  threads: 4
+
+CheckV:
+  t: 2
+
+CAT:
+  nproc: 4
+  block_size: 3.0
+  index_chunks: 1
+
+mmseqs_find_segmentedVirome:
+  format_output: "query,target,evalue,alnlen,pident,bits,qstart,qend,qlen,qcov,tstart,tend,tlen,tcov,taxid,taxname,taxlineage"
+
+tblastx_find_RelativeGenome:
+  num_threads: 1
+  evalue: 1e-5
+  max_target_seqs: 1
+  outfmt: "6 qseqid qlen sseqid slen qstart qend sstart send evalue bitscore length pident mismatch gaps stitle qcovs qcovhsp qcovus"
+
+ 
+##########################################################输出目录结构
+output:
+  relative: "/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/yanzeqin/project"
+  ##/ldfssz1/ST_INFECTION/P20Z10200N0206_pathogendb/yanzeqin/project/####zhongda###wuhan#animal##############
+  ##数据过滤
+  fastp: "01.QC/0101.fastp"
+  soapnuke: "01.QC/0102.soapnuke"
+  prinseq: "01.QC/0103.prinseq"
+  rmrRNA: "01.QC/0104.sortmeRNA"
+  ##组装
+  megahit: "02.assemble/megahit"
+  metaspades: "02.assemble/metaspades"
+  trinity: "02.assemble/trinity"
+  ##统计信息
+  stats: "03.stats"
+  ##比对到病毒NR库初步筛选
+  cdhitest: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR"
+  BlastxVirusNR: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR"
+  ##寻找病毒contigs
+  CAT: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR-CAT"
+  blastp2RdRp: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR-CAT-blastp2RdRp"
+  blastn2NT: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR-CAT-blastn2NT"
+  ##病毒质量检查
+  checkv: "05.Check_ViralContigs/Cdhiest-BlastxVirusNR-checkv"
+  bowtie2_depth: "05.Check_ViralContigs/bowtie2_contig_quality"
+  closespecies: "04.AssembleFindVirus_BaseBlast/Cdhiest-BlastxVirusNR-tblastxVirusGenome"
+  ##寻找样本宿主来源
+  cox1_findhost: "06.BaseCLRead_Analyse/FindHost_cox1"
+  ##宿主比对
+  hs_blastn: "04.AssembleFindVirus_BaseBlast/hsblastn"
+  ##机器学习
+  VirSorter: "07.AssembleFindVirus_learning/VirSorter2"
+
